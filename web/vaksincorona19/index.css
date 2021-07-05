@@ -1,0 +1,36 @@
+body{
+    text-align: center;
+    font-size: 8vmin;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+    linear-gradient(
+        rgb(255, 255, 255),
+        rgba(255, 255, 255, 0) 
+    ),
+    linear-gradient(
+        -45deg,
+        rgb(103, 86, 255),
+        rgba(255, 255, 255, 0) 
+    ),
+    linear-gradient(
+        45deg,
+        rgb(149, 248, 68),
+        rgba(255, 255, 255, 0) 
+    );
+    background-blend-mode: screen;
+    background-attachment: fixed;
+}
+
+button{
+    padding: 2vmin;
+    font-size: 6vmin;
+    width: 90vmin;
+    border: 0px;
+    border-radius: 3vmin;
+    cursor: pointer;
+    background-color: rgb(160, 202, 188);
+}
+
+button:hover{
+    background-color: mediumseagreen;
+}

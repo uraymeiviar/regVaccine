@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Registration</title>
+<link rel="stylesheet" href="main.css" />
+<script src="admin.js"></script>
+</head>
+<body>
+    <div id="loginForm">
+        <div class="fieldGroup">
+            <div class="fieldLabel">Password</div>
+            <input class="fieldInput" type="password" id="loginPasswd" onkeydown="if(event.keyCode == 13)login()"></input>
+            <div class="fieldDesc" id="loginPasswdDesc"></div>
+            <button onclick="login()" id="loginBtn">login</button>
+        </div>
+    </div>
+    <div id="adminPage" style="display: none;">
+        <div class="fieldGroup" style="display: flex;">
+            <div style="display: inline-block;">
+                <div id="loginName">Admin</div><button onclick="logout()">Logout</button>
+            </div>
+            <div style="display: inline-block;">
+                <span class="small">email contact: <span id="emailContact">Admin</span></span><br/>
+                <span class="small">phone contact: <span id="phoneContact">Admin</span></span>
+            </div>
+        </div>        
+        
+        <button id="createNewSessionBtn" onclick="createNewSessionClick(this)">Create New Session</button>
+        <button id="updateContactBtn" onclick="updateContactClick(this)">Update Contact</button>
+
+        <div class="modalWindow" id="contactForm" style="display:none;">
+            <div class="fieldLabel">Email Contact</div>
+            <input class="fieldInput" type="email" id="emailContact"></input>
+            <br/>
+
+            <div class="fieldLabel">Phone Contact</div>
+            <input class="fieldInput" type="number" id="phoneContact"></input>
+            <br/>
+            <button onclick="updateContact()">Update</button>
+            <button onclick="cancelUpdateContact(this)">Cancel</button>
+        </div>
+
+        <div id="createSessionForm" class="modalWindow" style="display: none;">
+            <div class="fieldLabel">Nama Sesi</div>
+            <input class="fieldInput" type="text" id="newSessionName"></input>
+            <br/>
+
+            <div class="fieldLabel">Batas waktu pendaftaran</div>
+            <input class="fieldInput" type="datetime-local" id="newSessionRegClose"></input>
+            <div class="fieldDesc">Pendaftaran akan dibuka sampai tanggal ini</div>
+            <br/>
+
+            <div class="fieldLabel">Jadwal Mulai</div>
+            <input class="fieldInput" type="datetime-local" id="newSessionStart"></input>
+            <br/>
+
+            <div class="fieldLabel">Jadwal Berakhir</div>
+            <input class="fieldInput" type="datetime-local" id="newSessionEnd"></input>
+            <div class="fieldDesc">digunakan untuk menghitung waktu undangan peserta</div>
+            <br/>
+
+            <div class="fieldLabel">Max registration</div>
+            <input class="fieldInput" type="number" id="newSessionMaxReg"></input>
+            <div class="fieldDesc">Apabila jumlah terpenuhi sesi registrasi otomatis akan ditutup, masukkan 0 tanpa membatasi jumlah registrasi</div>
+            <br/>
+
+            <div class="fieldLabel">Buka Pendaftaran</div>
+            <div class="field-checkbox">
+                <div class="field-checkbox-label">Tidak</div>
+                <div class="switch-button">
+                    <input class="switch-button-checkbox" type="checkbox" id="openReg" name="openReg" value="off"></input>
+                    <label class="switch-button-label" for="openReg"><span class="switch-button-label-span"></span></label>
+                </div>
+                <div class="field-checkbox-label">Ya</div>
+            </div>
+            <div class="fieldDesc">apabila "Tidak", sesi pendaftaran harus diaktifkan secara manual</div>
+            <br/>
+            <div class="fieldDesc fieldStateError" id="errorField"></div>
+            <br/>
+            <button onclick="createSession()" id="createSessionBtn">Create</button>
+            <button onclick="cancelCreateSession(this)">Cancel</button>
+        </div>
+        <div id="sessionList"></div>
+    </div>
+    <script>
+        login();
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Registration</title>
+<link rel="stylesheet" href="main.css" />
+<script src="reg.js"></script>
+</head>
+<body>
+<div id="title">Daftar</div>
+
+<div id="form">
+    <div class="fieldGroup">
+        <div class="fieldLabel">Nama</div>
+        <div class="fieldState" id="stateName"></div>
+        <input class="fieldInput" type="text" id="name" onchange="inputName(this)" oninput="inputName(this)"></input>
+        <div class="fieldDesc" id="descName">Nama Pastikan sesuai yang tertera di KTP</div>
+    </div>
+
+    <div class="fieldGroup">
+        <div class="fieldLabel">No. KTP</div>
+        <div class="fieldState" id="stateKTP"></div>
+        <input class="fieldInput" type="number" id="ktp" onchange="inputKTP(this)" oninput="inputKTP(this)"></input>
+        <div class="fieldDesc" id="descKTP">Pastikan No.KTP benar, data ini akan digunakan sebagai bukti pendaftaran</div>
+    </div>
+
+    <div class="fieldGroup">
+        <div class="fieldLabel">Alamat</div>
+        <textarea class="fieldInput" type="text" id="address"></textarea>
+        <div class="fieldDesc"></div>
+    </div>
+
+    <div class="fieldGroup">
+        <div class="fieldLabel">Tanggal Lahir</div>
+        <div class="fieldState" id="stateBirthDate"></div>
+        <input class="fieldInput" type="date" id="birthdate" onchange="inputBirthDate(this)" oninput="inputBirthDate(this)"></input>
+        <div class="fieldDesc" id="descBirthDate"></div>
+    </div>
+
+    <div class="fieldGroup">
+        <div class="fieldLabel">No. Telp</div>
+        <div class="fieldState" id="statePhone"></div>
+        <input class="fieldInput" type="number" id="phone" onchange="inputPhone(this)" oninput="inputPhone(this)"></input>
+        <div class="fieldDesc" id="descPhone">No.telp. akan digunakan untuk menginformasikan jadwal sesi vaksin</div>
+    </div>
+
+    <div class="fieldGroup">
+        <div class="fieldLabel">Jenis Kelamin</div>
+        <div class="field-checkbox">
+        <div class="field-checkbox-label">Laki-Laki</div>
+        <div class="switch-button">
+            <input class="switch-button-checkbox" type="checkbox" id="gender" name="gender" value="off"></input>
+            <label class="switch-button-label" for="gender"><span class="switch-button-label-span"></span></label>
+        </div>
+        <div class="field-checkbox-label">Perempuan</div>
+        </div>
+        <div class="fieldDesc"></div>
+    </div>
+
+    <div class="fieldGroup">
+        <div class="fieldLabel">Pernah Menderita Covid-19</div>
+        <div class="field-checkbox">
+        <div class="field-checkbox-label">Tidak</div>
+        <div class="switch-button">
+            <input class="switch-button-checkbox" type="checkbox" id="infected" name="infected" value="off" onchange="selectInfected(this)" oninput="selectInfected(this)"></input>
+            <label class="switch-button-label" for="infected"><span class="switch-button-label-span"></span></label>
+        </div>
+        <div class="field-checkbox-label">Pernah</div>
+        </div>
+        <div class="fieldDesc"></div>
+        <div class="fieldSubGroup" id="infectedGroup" style="display: none;">
+            <div class="fieldLabel">Tanggal dinyatakan <b>Positif</b></div>
+            <input class="fieldInput" type="date" id="infectionStart"></input>
+            <div class="fieldLabel">Tanggal dinyatakan <b>Pulih</b></div>
+            <input class="fieldInput" type="date" id="infectionFinish" onchange="inputInfectedEndDate(this)" oninput="inputInfectedEndDate(this)"></input>
+        </div>
+    </div>
+
+    <div class="fieldGroup">
+        <div class="fieldLabel">Pernah Mendapatkan Vaksin Covid-19</div>
+        <div class="field-checkbox">
+        <div class="field-checkbox-label">Belum</div>
+        <div class="switch-button">
+            <input class="switch-button-checkbox" type="checkbox" value="off" id="vac" name="vac" onchange="selectGivenVac(this)"></input>
+            <label class="switch-button-label" for="vac"><span class="switch-button-label-span"></span></label>
+        </div>
+        <div class="field-checkbox-label">Pernah</div>
+        </div>
+        <div class="fieldDesc"></div>
+        <div class="fieldSubGroup" id="vacGroup" style="display: none;">
+            <div class="fieldLabel">Tanggal Pemberian Vaksin</div>
+            <input class="fieldInput" type="date" id="vacDate" onchange="inputVacDate(this)" oninput="inputVacDate(this)"></input>
+            <div class="fieldLabel">Jenis Vaksin yang diberikan</div>
+            <select class="fieldInput" id="vacName" onchange="selectVacName(this)">
+                <option>Sinovac/Coronavac</option>
+                <option>BioFarma (MerahPutih)</option>
+                <option>Novavax</option>
+                <option>AstraZeneca</option>
+                <option>Pfizer</option>
+                <option>Moderna</option>
+                <option>Sinopharm</option>
+                <option>* Lainnya</option>
+                <option>* Tidak Tahu</option>
+            </select>
+            <div id="otherVacGroup" style="display: none;">
+                <div class="fieldLabel">Nama Vaksin</div>
+                <input class="fieldInput" type="text" id="otherVacName"></input>
+            </div>
+        </div>
+    </div>
+
+    <br/>
+    <div class="fieldDesc">Pastikan data yang dimasukkan sudah benar</div>
+    <center><button type="button" onclick="reg()">Daftarkan</button></center>
+</body>
+</html>
