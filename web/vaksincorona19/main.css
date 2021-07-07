@@ -1,6 +1,6 @@
-body{
+body {
     text-align: center;
-    font-size: min(3.5vmin,20px);
+    font-size: min(3.5vmin, 20px);
     font-family: Arial, Helvetica, sans-serif;
     /*
     background:
@@ -22,199 +22,249 @@ body{
     background-attachment: fixed;*/
 }
 
-button{
-    padding: min(1vmin,10px);
-    font-size: min(3vmin,20px);
+button {
+    padding: min(1vmin, 10px);
+    font-size: min(3vmin, 20px);
     border: 0px;
-    border-radius: min(1vmin,10px);
+    border-radius: min(1vmin, 10px);
     cursor: pointer;
     background-color: rgb(66, 141, 116);
-    margin: min(1vmin,10px);
-    padding: min(1vmin,10px);
-    padding-left: min(1.5vmin,14px);
-    padding-right: min(1.5vmin,14px);
+    margin: min(1vmin, 10px);
+    padding: min(1vmin, 10px);
+    padding-left: min(1.5vmin, 14px);
+    padding-right: min(1.5vmin, 14px);
     color: rgb(255, 255, 255);
 }
 
-button:hover{
+.smallbtn {
+    padding: min(0.5vmin, 4px);
+    font-size: min(2.5vmin, 16px);
+    border: 0px;
+    border-radius: min(0.5vmin, 4px);
+    cursor: pointer;
+    background-color: rgb(66, 141, 116);
+    margin: min(0.5vmin, 4px);
+    padding: min(0.5vmin, 4px);
+    padding-left: min(1vmin, 10px);
+    padding-right: min(1vmin, 10px);
+    color: rgb(255, 255, 255);
+    min-width: min(20vmin, 120px);
+}
+
+button:hover {
     background-color: rgb(81, 218, 143);
 }
 
-#loginName{
+#loginName {
     display: inline-block;
 }
 
-#form{
-    padding: min(2vmin,16px);
-    font-size: min(3.5vmin,24px);
+#form {
+    padding: min(2vmin, 16px);
+    font-size: min(3.5vmin, 24px);
     text-align: left;
 }
 
-#loginForm{
-    margin: min(2vmin,16px);
+#loginForm {
+    margin: min(2vmin, 16px);
 }
 
-#adminPage{
-    margin: min(2vmin,16px);
+#adminPage {
+    margin: min(2vmin, 16px);
     text-align: left;
 }
 
-.small{
-    font-size: min(2vmin,16px);
+.small {
+    font-size: min(2.5vmin, 16px);
     font-weight: bold;
+}
+
+.valueText {
+    font-size: min(3vmin, 20px);
     font-family: monospace;
 }
 
-.fieldDesc{
-    font-size: min(3vmin,20px);
-    margin-top: min(1vmin,10px);
+.fieldDesc {
+    font-size: min(3vmin, 20px);
+    margin-top: min(1vmin, 10px);
     color: rgb(48, 48, 48);
 }
 
-.fieldLabel{
+.fieldLabel {
     color: #000;
-    font-size: min(3.5vmin,24px);
+    font-size: min(3.5vmin, 24px);
     letter-spacing: 0.1vmin;
-    margin-bottom: 0.5vmin;
-    margin-top: min(1vmin,10px);
+    margin-bottom: min(0.5vmin, 4px);
+    margin-top: min(1vmin, 10px);
     display: inline-block;
 }
 
-.fieldGroup{
+.fieldGroup {
     background-color: rgba(0, 0, 0, 0.1);
-    border-radius: min(2vmin,16px);
-    padding: min(1.5vmin,14px);
-    padding-left: min(2vmin,16px);
-    padding-right: min(2vmin,16px);
-    padding-top: min(1vmin,10px);
-    margin-top: min(2vmin,16px);
+    border-radius: min(2vmin, 16px);
+    padding: min(1.5vmin, 14px);
+    padding-left: min(2vmin, 16px);
+    padding-right: min(2vmin, 16px);
+    padding-top: min(1vmin, 10px);
+    margin-top: min(2vmin, 16px);
 }
 
-.modalWindow{
+.modalWindow {
     background-color: rgba(0, 0, 0, 0.1);
-    padding: min(1.5vmin,14px);
-    padding-left: min(2vmin,16px);
-    padding-right: min(2vmin,16px);
-    padding-top: min(1vmin,10px);
-    margin:0;
+    padding: min(1.5vmin, 14px);
+    padding-left: min(2vmin, 16px);
+    padding-right: min(2vmin, 16px);
+    padding-top: min(1vmin, 10px);
+    margin: 0;
     position: absolute;
     width: 100%;
-    left:0;
-    bottom:0;
-    border-top:2px solid #ccc;
+    left: 0;
+    bottom: 0;
+    border-top: 2px solid #ccc;
 }
 
-.fieldSubGroup{
+.fieldSubGroup {
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: min(2vmin,16px);
-    padding: min(1.5vmin,14px);
-    padding-left: min(1vmin,10px);
-    padding-right: min(1vmin,10px);
-    margin-top: min(2vmin,16px);
-    margin-left: min(2vmin,16px);
+    border-radius: min(2vmin, 16px);
+    padding: min(1.5vmin, 14px);
+    padding-left: min(1vmin, 10px);
+    padding-right: min(1vmin, 10px);
+    margin-top: min(2vmin, 16px);
+    margin-left: min(2vmin, 16px);
 }
 
-.fieldStateError{
-    color:red !important;
+.fieldStateError {
+    color: red !important;
 }
 
-.fieldState{
-    color:rgb(66, 141, 116);
+.fieldState {
+    color: rgb(66, 141, 116);
     display: inline-block;
 }
 
-.fieldInput{
+.fieldInput {
     width: 100%;
-    font-size: min(3.5vmin,24px);
+    font-size: min(3.5vmin, 24px);
     font-family: monospace;
-    border:0px;
-    border-radius: min(1vmin,10px);
-    padding: min(1vmin,10px);
+    border: 0px;
+    border-radius: min(1vmin, 10px);
+    padding: min(1vmin, 10px);
     background-color: rgb(64, 64, 64);
     color: #fff;
 }
 
-.fieldInputError{
+.fieldInputError {
     background-color: rgb(92, 28, 17) !important;
-    color:white !important;
+    color: white !important;
 }
 
-.field-checkbox{
+.field-checkbox {
     display: table;
 }
 
-.field-checkbox-label{
+.field-checkbox-label {
     display: table-cell;
     vertical-align: middle;
-    min-width: min(20vmin,120px);
-    font-size: min(3vmin,20px);
+    min-width: min(20vmin, 120px);
+    font-size: min(3vmin, 20px);
     font-weight: bold;
 }
 
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-  }
+}
 
-  * {
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-  }
-  
+}
+
 .switch-button {
     background: rgb(64, 64, 64);
-    border-radius: min(2vmin,16px);
+    border-radius: min(2vmin, 16px);
     overflow: hidden;
-    width: min(10vmin,60px);
-    height: min(5vmin,30px);
+    width: min(10vmin, 60px);
+    height: min(5vmin, 30px);
     display: inline-block;
     position: relative;
     margin-left: 1vmin;
     margin-right: 1vmin;
 }
-  
+
 .switch-button-checkbox {
-      cursor: pointer;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      z-index: 2;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
 }
-  
-.switch-button-checkbox:checked + .switch-button-label:before {
-    transform: translateX(min(5vmin,30px));
+
+.switch-button-checkbox:checked+.switch-button-label:before {
+    transform: translateX(min(5vmin, 30px));
     transition: transform 300ms linear;
 }
-  
-.switch-button-checkbox + .switch-button-label {
+
+.switch-button-checkbox+.switch-button-label {
     position: relative;
-    padding: min(2vmin,16px) 0;
+    padding: min(2vmin, 16px) 0;
     display: block;
     user-select: none;
     pointer-events: none;
 }
-  
-.switch-button-checkbox + .switch-button-label:before {
+
+.switch-button-checkbox+.switch-button-label:before {
     content: "";
     color: #000;
     font-weight: bold;
     background: rgba(255, 255, 255, 0.5);
-    height: min(5vmin,30px);
-    width: min(5vmin,30px);
+    height: min(5vmin, 30px);
+    width: min(5vmin, 30px);
     position: absolute;
     left: 0;
     top: 0;
-    border-radius: min(2vmin,16px);
+    border-radius: min(2vmin, 16px);
     transform: translateX(0);
     transition: transform 300ms;
 }
-  
+
 .switch-button-label-span {
     position: relative;
 }
-  
+
+.sessionItem {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-top: 5px solid rgba(0, 0, 0, 0.4);
+    padding: min(1.5vmin, 14px);
+    padding-left: min(2vmin, 16px);
+    padding-right: min(2vmin, 16px);
+    padding-top: min(1vmin, 10px);
+}
+
+.sessionTable {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sessionCreationTime {
+    font-size: min(2vmin, 16px);
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.sessionName {
+    font-size: min(3.5vmin, 24px);
+    margin-bottom: min(1vmin, 10px);
+}
+
+.sessionInfo {}
+
+.sessionRegInfo {}

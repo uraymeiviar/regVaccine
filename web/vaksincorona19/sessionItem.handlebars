@@ -1,0 +1,34 @@
+<div class="sessionItem" id="sessionItem-{{id}}">
+    <div class="sessionTable">
+        <div class="sessionHeader">
+            <div class="sessionName" id="sessionName-{{id}}">{{name}}</div>
+            <!--div class="sessionCreationTime" id="sessionCreationTime-{{id}}">{{createDateStr}}</div-->
+            <span class="small">progress:</span><br/>
+            <div class="sessionProgress valueText" id="sessionProgress-{{id}}">{{completed}}/{{pending}}</div>
+        </div>
+        <div class="sessionRegInfo">        
+            <div class="regEndDate">
+                <span class="small">Batas Akhir Pendaftaran</span><br/>
+                <div id="sessionEndReg-{{id}}" class="valueText">{{regEndStr}}</div>
+            </div>
+            <div class="sessionRegProgress"  id="sessionRegProgress-{{id}}">
+                <span class="small">Jumlah Pendaftar</span><br/>
+                <span class="valueText" id="sessionRegCount-{{id}}">{{currentRegistrant}}/{{maxRegistrant}}</span>
+            </div>
+        </div>
+        <div class="sessionInfo">
+            <span class="small">Mulai Sesi</span><br/>
+            <div class="sessionStartDate valueText" id="sessionStartDate-{{id}}">{{sessionStartStr}}</div>
+            <span class="small">Akhir Sesi</span><br/>
+            <div class="sessionEndDate valueText" id="sessionEndDate-{{id}}">{{sessionEndStr}}</div>
+        </div>
+    </div>
+    <div class="sessionButtons">
+        <button class="smallbtn" id="closeRegBtn-{{id}}" style="display:{{#if regOpen}}inline-block{{else}}none{{/if}}";>Tutup Pendaftaran</button>
+        <button class="smallbtn" id="openRegBtn-{{id}}" style="display:{{#if regOpen}}none{{else}}inline-block{{/if}};">Buka Pendaftaran</button>
+        <button class="smallbtn" id="CloseSessionBtn-{{id}}" style="display:{{#if sessionRunning}}inline-block{{else}}none{{/if}};">Tutup Sesi</button>
+        <button class="smallbtn" id="startSessionBtn-{{id}}" style="display:{{#if sessionRunning}}none{{else}}inline-block{{/if}};">Mulai Sesi</button>
+        <button class="smallbtn" id="SessionDownload-{{id}}">Download Data</button>
+        <button class="smallbtn" id="SessionOpenData-{{id}}">Lihat Data</button>
+    </div>
+</div>

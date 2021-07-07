@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8" />
-<title>Registration</title>
-<link rel="stylesheet" href="main.css" />
-<script src="admin.js"></script>
+    <meta charset="utf-8" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="admin.js"></script>
 </head>
+
 <body>
     <div id="loginForm">
         <div class="fieldGroup">
@@ -24,8 +27,8 @@
                 <span class="small">email contact: <span id="emailContact">Admin</span></span><br/>
                 <span class="small">phone contact: <span id="phoneContact">Admin</span></span>
             </div>
-        </div>        
-        
+        </div>
+
         <button id="createNewSessionBtn" onclick="createNewSessionClick(this)">Create New Session</button>
         <button id="updateContactBtn" onclick="updateContactClick(this)">Update Contact</button>
 
@@ -81,10 +84,13 @@
             <button onclick="createSession()" id="createSessionBtn">Create</button>
             <button onclick="cancelCreateSession(this)">Cancel</button>
         </div>
-        <div id="sessionList"></div>
+
+        <div id="sessionList">
+        </div>
     </div>
     <script>
         login();
     </script>
 </body>
+
 </html>
